@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        body{
+            overflow-x: hidden;
+        }
+           .main-slider{
+            border: 1px solid black;
+            padding:4px;
+            width: 100%;
+           } 
+
+           .slider{
+            border: 1px solid black;
+            padding:4px;
+            width: 100%;
+            display: -webkit-inline-box;
+            animation-name: slid;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+
+           }
+
+
+           .slider:hover{
+            animation-play-state: paused;
+           }
+
+           @keyframes slid {
+
+            0% {
+                transform: translate(0% ,0px);
+                            }
+
+            10% {
+                transform: translate(-33%, 0px);
+                 
+           }
+            45% {
+                transform: translate(-66%, 0px);
+                 
+           }
+           
+           80% {
+                transform: translate(-99%, 0px);
+                 
+           }
+           
+           120% {
+                transform: translate(0%, 0px);
+                 
+           }
+           
+           }
+           
+           .slider .item{
+            background-color: brown;
+            margin: 4px;
+            padding:4px;
+            width: 32%            
+
+           }
+    </style>
+
+    <div class="main-slider ">
+        <div class="slider">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+    </div>
+    
+<button id="nxt">next</button>
+<script>
+    let val = document.querySelector('.slider')
+    let val2 = document.querySelector('#nxt')
+    val2.addEventListener('click', function () {
+
+        if (val.className == "slider"){
+            val.style.transform = 'translate translate(0%, 0px)'
+            console.log("red")
+            }
+
+
+
+    })
+</script>
+
+
+
+</body>
+</html>
