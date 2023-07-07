@@ -1,0 +1,23 @@
+.main-product-container{
+    width: 80%;
+    margin: 0% auto;
+    background-color: bisque;
+    display: flex;
+}
+
+
+.main-product-container .card{
+    width: 33.33%;
+    
+}
+
+.main-product-container .card .image-container{
+    width: 100%;
+    text-align: center;
+    
+}
+
+.main-product-container .card .image-container img{
+    width: 100%;
+    
+}
