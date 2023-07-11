@@ -1,18 +1,25 @@
 let product = {
     data: [
         {
-            product_name:"t-shirt white",
-            category:"t-shirt",
+            product_name:"white t-shirt ",
+            category:"T-shirt",
             price:"45",
-            image:"./image/white-t-shirt.jpg",
+            image:"./image/t-shirt1.webp",
 
         },
         
         {
-            product_name:"Trouser white",
-            category:"trouser",
+            product_name:"yellow t-shirt",
+            category:"T-shirt",
             price:"98",
-            image:"./image/trouser.jpg",
+            image:"./image/t-shirt2.webp",
+
+        },
+        {
+            product_name:"Black t-shirt",
+            category:"T-shirt",
+            price:"58",
+            image:"./image/t-shirt3.webp",
 
         }
     ]
@@ -40,7 +47,31 @@ image.setAttribute("src",p_value.image);
 imageContainer.appendChild(image);
 card.appendChild(imageContainer);
 
-document.querySelector(".main-product-container").appendChild(card);
+// category tag 
+
+let category = document.createElement("h5");
+
+category.innerText = "Category" + ": " + p_value.category
+card.appendChild(category);
+
+// price tag 
+
+let price = document.createElement("h4");
+
+price.innerText = "$" + " " + p_value.price
+card.appendChild(price);
+
+// name tag 
+
+let name = document.createElement("h3");
+
+name.innerText =  p_value.product_name
+card.appendChild(name);
+
+
+let main_product_container = document.querySelector(".main-product-container");
+main_product_container.appendChild(card)
+
 
 }
 
