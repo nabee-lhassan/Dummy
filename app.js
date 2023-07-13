@@ -2,7 +2,7 @@ let product = {
     data: [
         {
             product_name:"white t-shirt ",
-            category:"T-shirt",
+            category:"Plane",
             price:"45",
             image:"./image/t-shirt1.webp",
 
@@ -10,16 +10,30 @@ let product = {
         
         {
             product_name:"yellow t-shirt",
-            category:"T-shirt",
+            category:"Plane",
             price:"98",
             image:"./image/t-shirt2.webp",
 
         },
         {
             product_name:"Black t-shirt",
-            category:"T-shirt",
+            category:"Plane",
             price:"58",
             image:"./image/t-shirt3.webp",
+
+        },
+        {
+            product_name:"Contrast Blue",
+            category:"Printed",
+            price:"70",
+            image:"./image/t-shirt4.webp",
+
+        },
+        {
+            product_name:"Contrast Orange",
+            category:"printed",
+            price:"54",
+            image:"./image/t-shirt5.webp",
 
         }
     ]
@@ -75,10 +89,39 @@ main_product_container.appendChild(card)
 
 }
 
+// function filter(value){
+
+//     let btn = document.querySelectorAll(".filter-btn");
+//     btn.forEach(function (e){
+// if(value == e.innerText){
+//     e.classList.add('active')
+// }
+// else{
+//     e.classList.remove('active')
+// }
+//     })
+// }
 
 
+function filter(value){
 
+    let btn = document.querySelectorAll(".filter-btn");
+    btn.forEach(function (e){
+        
+        
+        
+if(value == e.innerText){
+    e.classList.add('active')
+}
+else{
+    e.classList.remove('active')
+}
+    })
+}
 
+window.onload = function () {
+    filter('printed');
+}
 
 
 // let Product_container = document.querySelector(".main-product-container");

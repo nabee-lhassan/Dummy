@@ -21,3 +21,19 @@
     width: 100%;
     
 }
+
+
+.active{
+    background-color: blueviolet;
+    color: white;
+    padding: 2% 3%;
+    border: none !important;
+    border-radius: 5px;
+}
+
+.filter-btn{
+  
+    padding: 1% 3%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
