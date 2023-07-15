@@ -123,23 +123,3 @@ window.onload = function () {
     filter('printed');
 }
 
-
-// let Product_container = document.querySelector(".main-product-container");
-
-// let main_product = document.createElement("div");
-// main_product.classList.add("main-product");
-
-
-// let product_name = document.createElement("div");
-// product_name.classList.add("product-name");
-
-
-// let images = document.createElement("img");
-// images.setAttribute("src","https://cdn.mukama.com/31812/formal-friday-ultrafine-merino-t-shirt-black.jpg");
-
-// console.log(images);
-
-
-
-// main_product.appendChild(images);
-// Product_container.appendChild(main_product);
