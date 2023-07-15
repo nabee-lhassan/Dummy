@@ -24,14 +24,14 @@ let product = {
         },
         {
             product_name:"Contrast Blue",
-            category:"Printed",
+            category:"Polo",
             price:"70",
             image:"./image/t-shirt4.webp",
 
         },
         {
             product_name:"Contrast Orange",
-            category:"printed",
+            category:"Printed",
             price:"54",
             image:"./image/t-shirt5.webp",
 
@@ -46,7 +46,7 @@ for(let p_value of product.data){
 
     // create card
     let card =document.createElement("div");
-    card.classList.add ("card", "p_value.category");
+    card.classList.add ("card", "hidden", p_value.category);
 
     // image container
 
@@ -117,9 +117,33 @@ else{
     e.classList.remove('active')
 }
     })
+
+    let elements = document.querySelectorAll(".card")
+    elements.forEach((e)=>{
+
+        if(value == 'All'){
+            e.classList.remove("hidden")
+            console.log(e)
+        }else{
+            if(e.classList.contains(value)){
+                e.classList.remove("hidden")
+                console.log(e)
+            }else{
+                e.classList.add("hidden")
+            }
+        }
+    })
+
 }
 
+// window.onload = function () {
+//     filter('Printed');
+// }
+
+
 window.onload = function () {
-    filter('printed');
+
+ filter ('All')
+
 }
 
