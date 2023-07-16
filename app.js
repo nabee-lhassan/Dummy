@@ -79,6 +79,8 @@ card.appendChild(price);
 
 let name = document.createElement("h3");
 
+name.classList.add("Product-name")
+
 name.innerText =  p_value.product_name
 card.appendChild(name);
 
@@ -89,18 +91,6 @@ main_product_container.appendChild(card)
 
 }
 
-// function filter(value){
-
-//     let btn = document.querySelectorAll(".filter-btn");
-//     btn.forEach(function (e){
-// if(value == e.innerText){
-//     e.classList.add('active')
-// }
-// else{
-//     e.classList.remove('active')
-// }
-//     })
-// }
 
 
 function filter(value){
@@ -124,21 +114,46 @@ else{
         if(value == 'All'){
             e.classList.remove("hidden")
             console.log(e)
-        }else{
-            if(e.classList.contains(value)){
+        }else if(e.classList.contains(value)){
                 e.classList.remove("hidden")
                 console.log(e)
             }else{
                 e.classList.add("hidden")
             }
-        }
+        
     })
 
 }
 
-// window.onload = function () {
-//     filter('Printed');
-// }
+
+// Search bar 
+
+let search_form = document.querySelector("#search-form")
+search_form.addEventListener("keyup", (event)=>{
+    event.preventDefault();
+    
+    let inp_search = document.querySelector("#search-content").value;
+
+    let Product_name = document.querySelectorAll(".Product-name");
+
+    let cards =document.querySelectorAll(".card");
+
+console.log(Product_name);
+// Loop For all Products name
+
+Product_name.forEach((element, index) =>{
+    console.log("index")
+if(element.innerText.includes(inp_search)){
+    cards[index].classList.remove("hidden")
+    
+}else{
+    cards[index].classList.add("hidden")
+}
+
+})
+
+})
+
 
 
 window.onload = function () {
