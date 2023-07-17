@@ -81,7 +81,7 @@ let name = document.createElement("h3");
 
 name.classList.add("Product-name")
 
-name.innerText =  p_value.product_name
+name.innerText =  p_value.product_name.toUpperCase()
 card.appendChild(name);
 
 
@@ -143,7 +143,7 @@ console.log(Product_name);
 
 Product_name.forEach((element, index) =>{
     console.log("index")
-if(element.innerText.includes(inp_search)){
+if(element.innerText.includes(inp_search.toUpperCase())){
     cards[index].classList.remove("hidden")
     
 }else{
